@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Labb2.Entities
 {
-    class Order
+    class Book
     {
     }
 }
