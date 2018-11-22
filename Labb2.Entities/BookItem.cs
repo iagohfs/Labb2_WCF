@@ -15,8 +15,12 @@ namespace Labb2.Entities
         [DataMember]
         public long OrderId { get; set; }
         [DataMember]
+        public int ProductId { get; set; }
         [DataMember]
+        public int Quantity { get; set; }
         [DataMember]
+        public decimal UnitPrice { get; set; }
         [DataMember]
+        public decimal TotalPrice { get; set; }
     }
 }

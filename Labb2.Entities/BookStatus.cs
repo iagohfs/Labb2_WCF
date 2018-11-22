@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Labb2.Entities
 {
-    class BookStatus
+    public class BookStatus
     {
+        public int Id { get; set; }
+        public string Name { get; set; }
     }
 }

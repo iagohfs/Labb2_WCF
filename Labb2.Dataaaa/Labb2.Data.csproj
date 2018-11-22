@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C4D7C31B-3922-4743-9235-3EBCEA5C7094}</ProjectGuid>
+    <ProjectGuid>{32B924AE-E518-4B4E-B37C-4E85C605A794}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Labb2.Data</RootNamespace>
@@ -48,18 +48,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Labb2DbContext.cs" />
+    <Compile Include="Migrations\201811080856464_hello.cs" />
+    <Compile Include="Migrations\201811080856464_hello.Designer.cs">
+      <DependentUpon>201811080856464_hello.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Labb2DbContext.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Labb2.Entities\Labb2.Entities.csproj">
-      <Project>{28877115-8212-43F2-A042-3DAA76432202}</Project>
-      <Name>Labb2.Entities</Name>
-    </ProjectReference>
+    <EmbeddedResource Include="Migrations\201811080856464_hello.resx">
+      <DependentUpon>201811080856464_hello.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
